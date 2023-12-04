@@ -5325,3 +5325,28 @@
     docker_arm_limited_access: true
   source: true
   previous_release: v23.2.0-beta.3
+
+# Matt's cloud-first test
+- release_name: v23.1.14
+  major_version: v23.1
+  release_date: '2023-12-25'
+  release_type: Production
+  cloud_only: true
+  cloud_only_message_short: 'Available only to select CockroachDB Dedicated clusters'
+  cloud_only_message: > # Leave two blank lines for a new para. No Liquid.
+    This version is currently available only to select
+    CockroachDB Dedicated clusters. To request to upgrade
+    your cluster to this version,
+    [contact support](https://support.cockroachlabs.com/hc/en-us/requests/new).
+
+
+    This release is currently not available for CockroachDB Self-Hosted.
+  go_version: go1.21
+  sha: d590dd0791fb5919a3fdd03cb968888a41ecf042
+  docker:
+    docker_image: cockroachdb/cockroach
+    docker_arm: true
+    docker_arm_experimental: true
+    docker_arm_limited_access: false
+  source: true
+  previous_release: v23.1.13
